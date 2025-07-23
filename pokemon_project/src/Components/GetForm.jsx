@@ -19,9 +19,13 @@ function GetForm(props) {
   };
 
   return (
+
     <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
+
+      <h3>Agrupa los Pokemons</h3>
+
       <fieldset>
-        <label htmlFor="from-pokemon">From: </label>
+        <label htmlFor="from-pokemon">Desde: </label>
         <input
           type="number"
           id="from-pokemon"
@@ -32,7 +36,7 @@ function GetForm(props) {
       </fieldset>
 
       <fieldset>
-        <label htmlFor="to-pokemon">To: </label>
+        <label htmlFor="to-pokemon">A: </label>
         <input
           type="number"
           id="to-pokemon"
@@ -42,7 +46,7 @@ function GetForm(props) {
         />
       </fieldset>
 
-      <button type="submit">Get Pokémons</button>
+      <button type="submit">Obtener Lista de Pokemons!</button>
     </form>
   );
 }

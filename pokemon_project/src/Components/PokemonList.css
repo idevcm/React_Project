@@ -1,9 +1,109 @@
-.pokemon-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    background-color: #ecf0f1;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
+  background: linear-gradient(135deg, #fdfcdc 60%, #f6e7cb 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 6px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s;
+}
+
+.pokemon-list:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+}
+
+.type-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 36px 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  font-weight: 800;
+}
+
+.type-group {
+  padding: 28px;
+  border-radius: 18px;
+  margin: 48px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border: 2px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(2px);
+}
+
+/* Fondos modernos por tipo */
+.fire {
+  background: linear-gradient(120deg, #ff512f 0%, #f09819 100%);
+  color: #fff;
+}
+.water {
+  background: linear-gradient(120deg, #2193b0 0%, #6dd5ed 100%);
+  color: #fff;
+}
+.grass {
+  background: linear-gradient(120deg, #56ab2f 0%, #a8e063 100%);
+  color: #fff;
+}
+.electric {
+  background: linear-gradient(120deg, #f7971e 0%, #ffd200 100%);
+  color: #333;
+}
+.psychic {
+  background: linear-gradient(120deg, #fc5c7d 0%, #6a82fb 100%);
+  color: #fff;
+}
+.rock {
+  background: linear-gradient(120deg, #868f96 0%, #596164 100%);
+  color: #fff;
+}
+.ground {
+  background: linear-gradient(120deg, #eacda3 0%, #d6ae7b 100%);
+  color: #6b4f1d;
+}
+.flying {
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  color: #234;
+}
+.ice {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  color: #234;
+}
+.bug {
+  background: linear-gradient(120deg, #dce35b 0%, #45b649 100%);
+  color: #234;
+}
+.poison {
+  background: linear-gradient(120deg, #a770ef 0%, #f6d365 100%);
+  color: #fff;
+}
+.fairy {
+  background: linear-gradient(120deg, #fbc2eb 0%, #f8a1d1 100%);
+  color: #a03e7d;
+}
+.fighting {
+  background: linear-gradient(120deg, #f77062 0%, #fe5196 100%);
+  color: #fff;
+}
+.dark {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+.dragon {
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #234;
+}
+.steel {
+  background: linear-gradient(120deg, #bdc3c7 0%, #2c3e50 100%);
+  color: #fff;
+}
+.ghost {
+  background: linear-gradient(120deg, #d3cce3 0%, #a6a6e3 100%);
+  color: #3a2c5a;
+}
+.normal {
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  color: #234;
 }

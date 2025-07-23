@@ -1,40 +1,61 @@
 .pokemon-card {
-  width: 280px;
-  min-height: 400px;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  margin: 15px;
+  width: 300px;
+  min-height: 420px;
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 32px rgba(24, 90, 157, 0.25), 0 2px 8px rgba(67, 206, 162, 0.10);
+  padding: 24px 20px 20px 20px;
+  margin: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+  border: 2px solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.pokemon-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #f7971e 0%, #ffd200 80%);
+  opacity: 0.18;
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .pokemon-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(24, 90, 157, 0.35), 0 4px 16px rgba(67, 206, 162, 0.15);
 }
 
 .pokemon-name {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(24, 90, 157, 0.18);
+  letter-spacing: 1px;
   text-transform: capitalize;
+  z-index: 1;
 }
 
 .pokemon-img {
-  width: 120px;
-  height: 120px;
-  image-rendering: pixelated;
-  margin: 10px 0;
-  background: white;
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(135deg, #fff 60%, #f7971e 100%);
   border-radius: 50%;
-  padding: 10px;
-  border: 2px solid #3498db;
+  padding: 12px;
+  border: 3px solid #43cea2;
+  image-rendering: pixelated;
+  margin: 14px 0;
+  box-shadow: 0 4px 16px rgba(67, 206, 162, 0.18);
+  z-index: 1;
 }
 
 .pokemon-id,
@@ -44,13 +65,19 @@
 .pokemon-abilities,
 .pokemon-types,
 .text {
-  font-size: 0.95rem;
-  margin: 4px 0;
-  color: #34495e;
+  font-size: 1.05rem;
+  margin: 5px 0;
+  color: #e0f7fa;
   text-align: center;
+  z-index: 1;
 }
 
 .pokemon-abilities,
 .pokemon-types {
   font-style: italic;
+  color: #ffd200;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 1;
 }
+

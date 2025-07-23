@@ -1,40 +1,71 @@
-/* App.css */
-
 body {
-    font-family: 'Reboto', Arial, sans-serif;
-    background: #f5f6fa;
-    margin: 0;
-    padding: 0;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 h2 {
-    color: #2d72d9;
-    text-align: center;
-    margin-top: 24px;
-    margin-bottom: 16px;
-    letter-spacing: 1px;
+  color: #1e3c72;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(30,60,114,0.08);
 }
 
 .pokemon-details {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
-    max-width: 400px;
-    margin: 32px auto 24px auto;
-    padding: 24px 32px;
-    text-align: center;
-    transition: box-shadow 0.2s;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.15), 0 1.5px 6px rgba(231,111,81,0.08);
+  max-width: 420px;
+  margin: 40px auto 28px auto;
+  padding: 32px 40px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.2s;
+  border: 2px solid #e76f51;
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
+}
+
+.pokemon-details::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #e76f51 0%, transparent 70%);
+  opacity: 0.12;
+  z-index: 0;
 }
 
 .pokemon-details h2 {
-    margin-top: 0;
-    color: #e76f51;
-    font-size: 2rem;
+  margin-top: 0;
+  color: #e76f51;
+  font-size: 2.2rem;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  z-index: 1;
+  position: relative;
+}
+
+.pokemon-details:hover {
+  box-shadow: 0 12px 40px rgba(30,60,114,0.22), 0 2px 8px rgba(231,111,81,0.12);
+  transform: translateY(-4px) scale(1.02);
 }
 
 @media (max-width: 600px) {
-    .pokemon-details {
-        padding: 16px 8px;
-        max-width: 95vw;
-    }
+  .pokemon-details {
+    padding: 18px 6vw;
+    max-width: 98vw;
+    border-radius: 14px;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 18px;
+  }
 }
