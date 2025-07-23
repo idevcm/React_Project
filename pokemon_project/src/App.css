@@ -1,0 +1,40 @@
+/* App.css */
+
+body {
+    font-family: 'Reboto', Arial, sans-serif;
+    background: #f5f6fa;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #2d72d9;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.pokemon-details {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+    max-width: 400px;
+    margin: 32px auto 24px auto;
+    padding: 24px 32px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.pokemon-details h2 {
+    margin-top: 0;
+    color: #e76f51;
+    font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+    .pokemon-details {
+        padding: 16px 8px;
+        max-width: 95vw;
+    }
+}
